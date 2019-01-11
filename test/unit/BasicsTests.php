@@ -9,8 +9,9 @@ class BasicsTests extends TestCase
 {
     public function testCompact()
     {
-        $arr = [NULL,false,0,"hello" => "",""];
-        $r = count(ArrayHelper::compact($arr)) == 0;
+        $arr = [ NULL,false,0,"hello" => "", "world" => "world", "", [], json_decode('{}')];
+        $r = count(ArrayHelper::compact($arr)) === 1;
         $this->assertTrue($r);
     }
+
 }
