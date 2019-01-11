@@ -1,0 +1,33 @@
+{
+    "name": "archphp/doraemon",
+    "description": "a robotic cat who provides lots of magic tools for PHP developers",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "medmin",
+            "email": "erichui329@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "require-dev": {
+        "php": ">=7.0.0",
+        "phpunit/phpunit": "^7"
+    },
+    "autoload": {
+        "psr-4": {
+            "ArchPHP\\Doraemon\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ArchPHP\\Doraemon\\": [
+                "test/unit",
+                "test/functional"
+            ]
+        }
+    }
+}
