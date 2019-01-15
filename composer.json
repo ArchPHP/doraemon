@@ -26,8 +26,7 @@
     "autoload-dev": {
         "psr-4": {
             "Loong\\Doraemon\\": [
-                "test/unit",
-                "test/functional"
+                "test/unit"
             ]
         }
     }

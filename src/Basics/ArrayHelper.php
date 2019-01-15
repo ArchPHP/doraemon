@@ -6,7 +6,7 @@ class ArrayHelper
 {
     public static function compact(array $arr) : array
     {
-        if (count($arr) == 0){
+        if (count($arr) === 0){
             return [];
         }
         $r = [];
