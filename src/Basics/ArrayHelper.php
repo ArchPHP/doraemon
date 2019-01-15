@@ -1,6 +1,6 @@
 <?php
 
-namespace ArchPHP\Doraemon\Basics;
+namespace Loong\Doraemon\Basics;
 
 class ArrayHelper
 {
@@ -12,11 +12,7 @@ class ArrayHelper
         $r = [];
         foreach ( $arr as $key => $value){
             if ($value){
-                if ( $value == (new \stdClass) ){
-                    
-                }else{
-                    $r[$key] = $value;
-                }
+                $r[$key] = $value;
             }
         }
         return $r;

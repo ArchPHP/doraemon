@@ -1,6 +1,6 @@
 <?php
 
-namespace ArchPHP\Doraemon\Basics;
+namespace Loong\Doraemon\Basics;
 
 class StringHelper
 {

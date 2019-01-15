@@ -1,15 +1,15 @@
 <?php
 
-namespace ArchPHP\Doraemon;
+namespace Loong\Doraemon;
 
-use ArchPHP\Doraemon\Basics\ArrayHelper;
+use Loong\Doraemon\Basics\ArrayHelper;
 use PHPUnit\Framework\TestCase;
 
 class BasicsTests extends TestCase
 {
     public function testCompact()
     {
-        $arr = [ NULL,false,0,"hello" => "", "world" => "world", "", [], json_decode('{}')];
+        $arr = [ NULL,false,0,"hello" => "", "world" => "world", "", []];
         $r = count(ArrayHelper::compact($arr)) === 1;
         $this->assertTrue($r);
     }

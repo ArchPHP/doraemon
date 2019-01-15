@@ -1,5 +1,5 @@
 {
-    "name": "archphp/doraemon",
+    "name": "loong/doraemon",
     "description": "a robotic cat who provides lots of magic tools for PHP developers",
     "type": "library",
     "license": "MIT",
@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ArchPHP\\Doraemon\\": "src/"
+            "Loong\\Doraemon\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ArchPHP\\Doraemon\\": [
+            "Loong\\Doraemon\\": [
                 "test/unit",
                 "test/functional"
             ]
