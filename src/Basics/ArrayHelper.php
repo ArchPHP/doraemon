@@ -4,6 +4,32 @@ namespace Loong\Doraemon\Basics;
 
 class ArrayHelper
 {
+    public static function chunk(array $arr, int $size, bool $preserve_keys = false) : array
+    {
+        $size = max($size, 0);
+        $length = count($arr);
+        if ($length == 0 || $size == 0) {
+            return [];
+        }
+        $index = 0;
+        $resIndex = 0;
+        $result = [];
+        $resultMaxLength = ceil($length / $size);
+
+        while ($index < $length && $resIndex < $resultMaxLength) {
+            $result[] = array_slice($arr, $index, ($index += $size), true);
+            $resIndex++;
+        }
+        if (!$preserve_keys){
+            $tempResult = [];
+            foreach ($result as $resultElementArray)
+            {
+                $tempResult[] = self::values($resultElementArray);
+            }
+           $result = $tempResult;
+        }
+        return $result;
+    }
     public static function compact(array $arr) : array
     {
         if (count($arr) === 0){
