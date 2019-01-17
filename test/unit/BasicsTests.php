@@ -1,8 +1,8 @@
 <?php
 
-namespace Loong\Doraemon;
+namespace ArchPHP\Doraemon;
 
-use Loong\Doraemon\Basics\ArrayHelper;
+use ArchPHP\Doraemon\Basics\ArrayHelper;
 use PHPUnit\Framework\TestCase;
 
 class BasicsTests extends TestCase

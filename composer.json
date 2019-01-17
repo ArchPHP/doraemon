@@ -1,14 +1,12 @@
 {
-    "name": "loong/doraemon",
+    "name": "archphp/doraemon",
     "description": "a robotic cat who provides lots of magic tools for PHP developers",
     "type": "library",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "medmin",
-            "email": "erichui329@gmail.com"
-        }
-    ],
+    "authors": [{
+        "name": "medmin",
+        "email": "erichui329@gmail.com"
+    }],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
@@ -20,12 +18,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Loong\\Doraemon\\": "src/"
+            "ArchPHP\\Doraemon\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Loong\\Doraemon\\": [
+            "ArchPHP\\Doraemon\\": [
                 "test/unit"
             ]
         }
