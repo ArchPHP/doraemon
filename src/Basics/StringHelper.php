@@ -4,7 +4,7 @@
  *
  * @author      Yumin Gui <guiyumin@gmail.com>
  * @copyright   (c) Yumin Gui
- * @link        https=>//github.com/archphp/doraemon
+ * @link        https://github.com/archphp/doraemon
  * @license     MIT
  */
 
@@ -55,6 +55,48 @@ class StringHelper
           }
         }
         return $result;
+    }
+
+    public static function pascalCase(string $str)
+    {
+        $filtedStringArray = self::stringFilter($str);
+
+        if (!count($filtedStringArray)){
+          return "";
+        }
+
+        $result = "";
+        foreach($filtedStringArray as $word)
+        {
+            $result .= ucfirst(strtolower($word));
+        }
+        return $result;
+    }
+
+    public static function kebabCase(string $str)
+    {
+        $filtedStringArray = self::stringFilter($str);
+
+        if (!count($filtedStringArray)){
+          return "";
+        }
+
+        $result = implode("-",$filtedStringArray);
+
+        return strtolower($result);
+    }
+
+    public static function snakeCase(string $str)
+    {
+        $filtedStringArray = self::stringFilter($str);
+
+        if (!count($filtedStringArray)){
+          return "";
+        }
+
+        $result = implode("_",$filtedStringArray);
+
+        return strtolower($result);
     }
     
   
