@@ -46,7 +46,7 @@ class ArrayHelper
         $r = [];
         foreach ( $arr as $key => $value){
             if ($value){
-                $r[$key] = $value;
+                $r[] = $value;
             }
         }
         return $r;

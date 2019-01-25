@@ -17,16 +17,16 @@ class StringHelperTests extends TestCase
 {
     public function testCamelCase()
     {
-        $str1 = "--foo##Bar  你好abc";
+        $str1 = "--fooBar  你好abc";
         $r1 = StringHelper::camelCase($str1);
         $this->assertEquals('fooBarAbc', $r1);
     }
 
     public function testPascalCase()
     {
-        $str1 = "--foo##bAR  你好abc";
+        $str1 = "--fooBB_ar  你好abc";
         $r1 = StringHelper::pascalCase($str1);
-        $this->assertEquals('FooBarAbc', $r1);
+        $this->assertEquals('FooBBArAbc', $r1);
     }
 
     public function testKebabCase()

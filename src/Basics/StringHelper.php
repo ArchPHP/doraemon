@@ -10,6 +10,8 @@
 
 namespace ArchPHP\Doraemon\Basics;
 
+use ArchPHP\Doraemon\Basics\ArrayHelper;
+
 class StringHelper
 {
        
@@ -17,26 +19,30 @@ class StringHelper
     {
         $result = [];
         $tmpStr = "";
+
         for($i = 0; $i < strlen($str); $i++){
             $char = $str[$i];
-            if ( ($char >= 'a' && $char <= 'z' ) || ( $char >='A' && $char <= 'Z')){
+            if ($char >= 'a' && $char <= 'z'  ){
                 $tmpStr .= $char;
-                if( $i === strlen($str) - 1){
-                    $result[] = $tmpStr;
-                }
+            }
+            else if ($char >= 'A' && $char <= 'Z'  ){
+                $result[] = $tmpStr;
+                $tmpStr = $char;
             }
             else{
-                if ($tmpStr){
-                  $result[] = $tmpStr;
-                  $tmpStr= "";  
-                }
+                $result[] = $tmpStr;
+                $tmpStr = "";
+            }
+
+            if( $i === strlen($str) - 1){
+                $result[] = $tmpStr;
             }
         }
-        return $result;
+        return ArrayHelper::compact($result);
     }
   
 
-    public static function camelCase(string $str)
+    public static function camelCase(string $str): string
     {
         $filtedStringArray = self::stringFilter($str);
 
@@ -47,17 +53,17 @@ class StringHelper
         $result = "";
         foreach($filtedStringArray as $key=>$word)
         {
-          if (!$key) {
+          if ($key === 0) {
             $result .= strtolower($word);
           }
           else{
-            $result .= ucfirst(strtolower($word));
+            $result .= ucfirst($word);
           }
         }
         return $result;
     }
 
-    public static function pascalCase(string $str)
+    public static function pascalCase(string $str) : string
     {
         $filtedStringArray = self::stringFilter($str);
 
@@ -68,12 +74,12 @@ class StringHelper
         $result = "";
         foreach($filtedStringArray as $word)
         {
-            $result .= ucfirst(strtolower($word));
+            $result .= ucfirst($word);
         }
         return $result;
     }
 
-    public static function kebabCase(string $str)
+    public static function kebabCase(string $str) : string
     {
         $filtedStringArray = self::stringFilter($str);
 
@@ -86,7 +92,7 @@ class StringHelper
         return strtolower($result);
     }
 
-    public static function snakeCase(string $str)
+    public static function snakeCase(string $str) : string
     {
         $filtedStringArray = self::stringFilter($str);
 
@@ -99,11 +105,4 @@ class StringHelper
         return strtolower($result);
     }
     
-  
-
-
-  
-
-
-      
 }
