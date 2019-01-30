@@ -13,7 +13,7 @@ namespace ArchPHP\Doraemon;
 use ArchPHP\Doraemon\Basics\StringHelper;
 use PHPUnit\Framework\TestCase;
 
-class StringHelperTests extends TestCase
+class StringHelperTest extends TestCase
 {
     public function testCamelCase()
     {
