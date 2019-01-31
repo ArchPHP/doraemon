@@ -8,7 +8,7 @@
  * @license     MIT
  */
 
-namespace ArchPHP\Doraemon;
+namespace ArchPHP\Doraemon\test\unit;
 
 use ArchPHP\Doraemon\Basics\ArrayHelper;
 use PHPUnit\Framework\TestCase;

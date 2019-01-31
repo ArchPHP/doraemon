@@ -3,10 +3,12 @@
     "description": "a robotic cat who provides lots of magic tools for PHP developers",
     "type": "library",
     "license": "MIT",
-    "authors": [{
-        "name": "medmin",
-        "email": "erichui329@gmail.com"
-    }],
+    "authors": [
+        {
+            "name": "medmin",
+            "email": "erichui329@gmail.com"
+        }
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
@@ -23,9 +25,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "ArchPHP\\Doraemon\\": [
-                "test/unit"
-            ]
+            "ArchPHP\\Doraemon\\test\\": "test/"
         }
     }
 }
