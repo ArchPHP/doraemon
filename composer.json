@@ -25,7 +25,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "ArchPHP\\Doraemon\\test\\": "test/"
+            "ArchPHP\\Doraemon\\tests\\": "tests/"
         }
     }
 }

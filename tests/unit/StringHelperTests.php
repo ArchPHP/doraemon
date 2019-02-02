@@ -8,7 +8,7 @@
  * @license     MIT
  */
 
-namespace ArchPHP\Doraemon\test\unit;
+namespace ArchPHP\Doraemon\tests\unit;
 
 use ArchPHP\Doraemon\Basics\StringHelper;
 use PHPUnit\Framework\TestCase;
