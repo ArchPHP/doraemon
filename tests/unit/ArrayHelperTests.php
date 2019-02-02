@@ -13,7 +13,7 @@ namespace ArchPHP\Doraemon\test\unit;
 use ArchPHP\Doraemon\Basics\ArrayHelper;
 use PHPUnit\Framework\TestCase;
 
-class ArrayHelperTest extends TestCase
+class ArrayHelperTests extends TestCase
 {
     public function testChunk()
     {

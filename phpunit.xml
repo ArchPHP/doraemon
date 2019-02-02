@@ -5,7 +5,7 @@
     stopOnFailure="false">
     <testsuites>
         <testsuite name="Doraemon Test">
-            <directory>test</directory>
+            <directory suffix="Tests.php">tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
