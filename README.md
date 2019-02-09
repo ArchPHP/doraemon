@@ -20,5 +20,6 @@ $myArr = [
     []
 ];
 
-echo ArrayHelper::compact($myArr); // ["world" => "world"]
+print_r( ArrayHelper::compact($myArr) );
+
 ```
