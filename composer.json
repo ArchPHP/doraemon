@@ -27,5 +27,8 @@
         "psr-4": {
             "ArchPHP\\Doraemon\\tests\\": "tests/"
         }
+    },
+    "scripts": {
+        "test": "vendor\\bin\\phpunit"
     }
 }
