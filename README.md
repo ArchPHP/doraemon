@@ -4,7 +4,14 @@
  - We hope our peer PHP developers would enjoy the tools this cat provides.
 
 ## Getting Started
-> composer require archphp/doraemon
+
+### requires
+ - php: >=7.0.0
+
+## Installation
+```php
+ composer require archphp/doraemon
+```
 
 ## Usage
 ```php
